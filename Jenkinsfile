@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        DOCKERHUB_USER = "nagarjunbujji"
+        DOCKERHUB_USER = "spkumardocker"
         DOCKERHUB_REPO = "java-aks-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USER}/${DOCKERHUB_REPO}"
@@ -15,7 +15,7 @@ pipeline {
 
     stages {
 
-        stage("Checkout Code") {
+        stage("Cloning code from Git Repository") {
             steps {
                 git branch: 'main',
                 url: 'https://github.com/sharabgithub/devsecops-project.git'
